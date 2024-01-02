@@ -1,0 +1,32 @@
+<macros>
+    <token name="@VERSION_SUFFIX@">0</token>
+    <token name="@TOOL_VERSION@">v2.0.0</token>
+    <xml name="requirements">
+        <requirements>
+            <requirement type="package" version="@TOOL_VERSION@">beacon2-ri-tools</requirement>
+            <requirement type="package" version="0.20">perl-perlio-gzip</requirement>
+            <requirement type="package">perl-json-xs</requirement>
+        </requirements>
+    </xml>
+    <xml name="xrefs">
+        <xrefs>
+            <xref type="bio.tools">GA4GH Beacon</xref>
+        </xrefs>
+    </xml>
+    <xml name="input">
+            <param argument="--input" type="data" format="vcf" label="Annotated vcf file" help="" />
+            <param argument="--format" type="select" label="Output format" help="">
+                <option value="bff" selected="True">bff</option>
+                <option value="hash">hash</option>
+                <option value="json">json</option>
+            </param>
+            <param argument="--project-dir" type="text" label="Beacon project dir" value="" help="" />
+            <param argument="--dataset-id" type="text" label="Dataset ID" value="" help="" />
+            <param argument="--genome" type="text" label="Reference genome" value="" help="" />
+    </xml>
+        <xml name="citations">
+        <citations>
+            <citation type="doi">10.1093/bioinformatics/btac568</citation>
+        </citations>
+    </xml>
+</macros>
